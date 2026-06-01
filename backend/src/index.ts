@@ -58,8 +58,4 @@ app.route("/api/comments", commentRoutes);
 
 app.on(["POST", "GET"], "/api/auth/*", (c) => auth.handler(c.req.raw));
 
-const port = Number(env.PORT);
-export default {
-  port: port,
-  fetch: app.fetch,
-};
+export default app;
