@@ -6,8 +6,11 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
+    "baseUrl": ".", // 1. Wajib ditambahkan jika menggunakan 'paths'
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/generated/*": ["../generated/*"] // 2. Tambahkan ini jika Prisma di-generate ke folder custom di luar src
     }
-  }
+  },
+  "include": ["src/**/*", "api/**/*"] // 3. Pastikan folder api yang baru dibuat ikut dibaca oleh TypeScript
 }
