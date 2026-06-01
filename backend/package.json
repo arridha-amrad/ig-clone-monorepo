@@ -8,9 +8,10 @@
     "db:p": "bunx --bun prisma db push",
     "db:seed": "bunx --bun prisma db seed",
     "db:s": "bunx --bun prisma studio",
-    "seed": "bunx prisma db seed",
-    "build": "bun prisma generate && bun build ./src/index.ts --target=node --outfile=./dist/index.js",
-    "vercel-build": "bun prisma generate && bun build ./src/index.ts --target=node --outfile=./dist/index.js"
+    "build": "bun prisma generate && bun build ./src/index.ts --target=bun --minify --outfile=./dist/index.js",
+    "vercel-build": "bun prisma generate && bun build ./src/index.ts --target=bun --minify --outfile=./dist/index.js",
+    "postinstall": "bunx --bun prisma generate",
+    "start": "bun ./dist/index.js"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.8.0",
