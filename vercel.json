@@ -9,8 +9,7 @@
       "root": "backend",
       "routePrefix": "/_/backend",
       "framework": "hono",
-      "entrypoint": "api/index.ts",
-      "runtime": "bun"
+      "entrypoint": "api/index.ts"
     }
   }
 }
